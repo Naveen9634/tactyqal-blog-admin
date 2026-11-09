@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS tactyqal_blog;
+
+USE tactyqal_blog;
+
+CREATE TABLE IF NOT EXISTS posts (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content LONGTEXT NOT NULL,
+    author VARCHAR(120) NOT NULL DEFAULT 'Admin',
+    image_url VARCHAR(2048),
+    status ENUM('draft', 'published') DEFAULT 'draft',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        ON UPDATE CURRENT_TIMESTAMP
+);
