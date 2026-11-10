@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-const API_URL = "http://localhost:5000/api/posts";
+const API_URL = "https://tactyqal-blog-admin.onrender.com/api/posts";
 
 function App() {
   const [posts, setPosts] = useState([]);
