@@ -10,7 +10,7 @@ export const getPosts = async (req, res) => {
         res.json({ success: true, data: posts });
 
     } catch (error) {
-        console.error(error);
+        console.error("Error fetching posts:", error);
         res.status(500).json({ message: "Server error" });
     }
 };
